@@ -1,0 +1,319 @@
+/* ===== General Styles ===== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f4f9f4;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+/* ===== Header ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 30px;
+  gap: 10px; /* spacing between logo and search */
+  flex-wrap: wrap; /* allows wrapping on small screens */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.logo span {
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+}
+
+/* ===== Search Bar (click-to-expand) ===== */
+.search-wrapper {
+  position: relative;
+}
+
+.search-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.search-bar {
+  display: none;
+  position: absolute;
+  top: 60px; /* adjust if header height changes */
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 100;
+}
+
+.search-bar input {
+  padding: 8px 12px;
+  border: none;
+  outline: none;
+  flex: 1;
+}
+
+.search-bar button {
+  padding: 8px 15px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+  background-color: #048408;
+}
+
+.search-bar.show {
+  display: flex;
+}
+
+/* ===== Navigation ===== */
+nav {
+  background-color: #388e3c;
+  padding: 10px 30px;
+  text-align: center;
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+nav ul li a {
+  color: white;
+  font-weight: bold;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  background-image: url('your-image.jpg'); /* Replace with actual image path */
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: black;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #048408;
+  color: white;
+}
+
+/* ===== Sections ===== */
+section {
+  padding: 20px;
+  margin: 10px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* ===== Card Styles ===== */
+.em-card {
+  border-radius: 16px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.em-image {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.em-card-description {
+  color: #323f4b;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.em-card-link {
+  color: #d0b200;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.em-card-link svg {
+  margin-left: 5px;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #f9f9f9;
+  color: #333;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Newsletter */
+.newsletter {
+  background-color: #8bc34a;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  flex-wrap: wrap;
+}
+
+.newsletter p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+}
+
+.newsletter-form input {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: none;
+  width: 250px;
+}
+
+.newsletter-form button {
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover{
+  background-color: #048408;
+}
+
+/* Footer Main */
+.footer-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 40px 30px;
+  background-color: #fff;
+}
+
+.footer-column h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #2e7d32;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: #555;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #2e7d32;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a img {
+  width: 24px;
+  margin-right: 10px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e0e0e0;
+  padding: 15px 30px;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+
+.payment-icons img {
+  height: 24px;
+  margin-left: 10px;
+}
+
+/* Section Heading */
+.why-choose-us-section-heading {
+  font-family: "Roboto", sans-serif;
+  color: #2e7d32;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+/* Payment icons large */
+.payment-icons-2 img {
+  height: 100px;
+  margin-left: 10px;
+  text-emphasis: bold;
+}
